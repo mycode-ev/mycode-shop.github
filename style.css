@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&family=Rowdies:wght@300;400;700&family=Rubik+Glitch&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(129, 129, 129);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }   
+
+header {
+    background: rgba(144, 0, 255, 0.4);
+    display: flex;
+    height: 90px;
+    align-items: center;
+    justify-content: space-around;
+    width: 97%;
+    border-radius: 0 0 50px 50px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header .logo {
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    position: relative;
+    right: 40px;
+}
+
+nav a {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  nav a:focus,
+  nav a:hover {
+    color: #9900ff;
+  }
+  
+  nav a:focus:after,
+  nav a:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+ nav a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #9900ff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
+  nav a:hover {
+    color: #9900ff;
+  }
+
+  .nav-links {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  header .logo {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 26px;
+    position: relative;
+    left: -100px;
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.burger.open div:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open div:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: rgba(144, 0, 255, 0.4);
+        padding: 10px;
+        z-index: 1;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        border-radius: 5px;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
